@@ -23,11 +23,15 @@ Window {
                 font.pointSize: 15
                 Layout.alignment: Qt.AlignLeft
                 Layout.leftMargin: 10
+                Layout.bottomMargin: 10
             }
 
             Counter {
                 Layout.alignment: Qt.AlignCenter
                 Layout.fillWidth: true
+            }
+
+            Item {
                 Layout.fillHeight: true
             }
 

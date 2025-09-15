@@ -28,7 +28,6 @@ Window {
 
             Counter {
                 Layout.alignment: Qt.AlignCenter
-                Layout.fillWidth: true
             }
 
             Item {

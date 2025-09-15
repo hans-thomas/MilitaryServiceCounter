@@ -1,8 +1,11 @@
 import QtQuick
 import QtQuick.Studio.Components
-import QtQuick.Studio.DesignEffects
 
 Item {
+    id: root
+    implicitWidth: 200
+    implicitHeight: 200
+
     Rectangle {
         id: rectangle
         x: 0

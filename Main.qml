@@ -56,7 +56,7 @@ Window {
                 }
 
                 Text {
-                    text: "460 Kcal"
+                    text: "0 Kcal"
                     font.pointSize: 18
                     Layout.alignment: Qt.AlignCenter
                 }

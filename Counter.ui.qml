@@ -3,8 +3,8 @@ import QtQuick.Studio.Components
 
 Item {
     id: root
-    implicitWidth: 200
-    implicitHeight: 200
+    width: 200
+    implicitHeight: width
 
     Rectangle {
         id: rectangle
@@ -27,7 +27,7 @@ Item {
         Text {
             id: text1
             text: qsTr("500")
-            font.pixelSize: 30
+            font.pixelSize: root.width * 0.15
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 35
@@ -36,7 +36,7 @@ Item {
         Text {
             id: text2
             text: qsTr("/")
-            font.pixelSize: 50
+            font.pixelSize: root.width * 0.25
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -44,7 +44,7 @@ Item {
         Text {
             id: text3
             text: qsTr("500")
-            font.pixelSize: 34
+            font.pixelSize: root.width * 0.17
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: 30

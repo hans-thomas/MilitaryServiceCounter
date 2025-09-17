@@ -2,15 +2,18 @@ import QtQuick
 import QtQuick.Layouts
 
 Window {
+    id: mainWindow
     title: qsTr("Holy Counter")
     width: 640
     height: 480
     minimumWidth: 640
     minimumHeight: 480
     visible: true
+    color: "#EEDDF3"
 
     Rectangle {
-        color: "blue"
+        color: "#DFCAEC"
+        radius: 10
         anchors.fill: parent
         anchors.margins: 50
 
@@ -20,14 +23,15 @@ Window {
 
             Text {
                 text: "Day Counter"
-                font.pointSize: 15
+                font.pointSize: 21
                 Layout.alignment: Qt.AlignLeft
-                Layout.leftMargin: 10
-                Layout.bottomMargin: 10
+                Layout.leftMargin: 20
+                Layout.topMargin: 20
             }
 
             Counter {
                 Layout.alignment: Qt.AlignCenter
+                Layout.preferredWidth: mainWindow.height * 0.52
             }
 
             Item {
@@ -37,32 +41,39 @@ Window {
             RowLayout {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignCenter
+                Layout.leftMargin: 20
+                Layout.rightMargin: 20
                 spacing: 40
 
                 Text {
                     text: "Calories Burned"
-                    font.pointSize: 12
-                    Layout.alignment: Qt.AlignLeft
+                    font.pointSize: 16
+                    Layout.alignment: Qt.AlignCenter
                 }
+
                 Item {
                     Layout.fillWidth: true
                 }
+
                 Text {
                     text: "460 Kcal"
-                    font.pointSize: 12
-                    Layout.alignment: Qt.AlignRight
+                    font.pointSize: 18
+                    Layout.alignment: Qt.AlignCenter
                 }
             }
 
             RowLayout {
                 Layout.fillWidth: true
-                Layout.alignment: Qt.AlignLeft
+                Layout.alignment: Qt.AlignCenter
+                Layout.leftMargin: 20
+                Layout.rightMargin: 20
+                Layout.bottomMargin: 20
                 spacing: 40
 
                 Text {
                     text: "Distance Covered"
-                    font.pointSize: 12
-                    Layout.alignment: Qt.AlignLeft
+                    font.pointSize: 16
+                    Layout.alignment: Qt.AlignCenter
                 }
 
                 Item {
@@ -71,8 +82,8 @@ Window {
 
                 Text {
                     text: "0 cm"
-                    font.pointSize: 12
-                    Layout.alignment: Qt.AlignRight
+                    font.pointSize: 18
+                    Layout.alignment: Qt.AlignCenter
                 }
             }
         }

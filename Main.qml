@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import MyApp.TimeCalculator
 
 Window {
     id: mainWindow
@@ -22,7 +23,7 @@ Window {
             spacing: 1
 
             Text {
-                text: "Day Counter"
+                text: qsTr("Day %nth", "", timeCalc.daysPassed())
                 font.pointSize: 21
                 Layout.alignment: Qt.AlignLeft
                 Layout.leftMargin: 20
@@ -36,6 +37,9 @@ Window {
             Counter {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: mainWindow.height * 0.52
+
+                total_days: timeCalc.totalDays()
+                passed_days: timeCalc.daysPassed()
             }
 
             Item {
@@ -85,11 +89,15 @@ Window {
                 }
 
                 Text {
-                    text: "0 cm"
+                    text: qsTr("%n cm", "", 0)
                     font.pointSize: 18
                     Layout.alignment: Qt.AlignCenter
                 }
             }
         }
+    }
+
+    TimeCalculator {
+        id: timeCalc
     }
 }

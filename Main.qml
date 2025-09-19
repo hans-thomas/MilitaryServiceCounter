@@ -29,8 +29,12 @@ Window {
                 Layout.topMargin: 20
             }
 
+            Item {
+                Layout.fillHeight: true
+            }
+
             Counter {
-                Layout.alignment: Qt.AlignCenter
+                Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: mainWindow.height * 0.52
             }
 

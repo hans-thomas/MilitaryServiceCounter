@@ -6,6 +6,9 @@ Item {
     width: 200
     implicitHeight: width
 
+    property int total_days: 730
+    property int passed_days: 730
+
     Rectangle {
         id: rectangle
         anchors.fill: parent
@@ -18,7 +21,7 @@ Item {
             width: parent.width * 0.92
             height: parent.height * 0.92
             begin: 230
-            end: 490
+            end: 230 + (2.6 * (passed_days / total_days * 100))
             strokeWidth: 15
             strokeColor: "#ee92b1"
             fillColor: "#00000000"
@@ -26,7 +29,7 @@ Item {
 
         Text {
             id: text1
-            text: qsTr("500")
+            text: total_days - passed_days
             font.pixelSize: root.width * 0.15
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
@@ -43,7 +46,7 @@ Item {
 
         Text {
             id: text3
-            text: qsTr("500")
+            text: total_days
             font.pixelSize: root.width * 0.17
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right

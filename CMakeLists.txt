@@ -13,11 +13,14 @@ qt_add_executable(appMilitaryServiceCounter
 )
 
 qt_add_qml_module(appMilitaryServiceCounter
-    URI MilitaryServiceCounter
+    URI MyApp
     VERSION 1.0
     QML_FILES
         Main.qml
-        QML_FILES Counter.ui.qml
+        Counter.ui.qml
+    SOURCES
+            TimeCalculator.cpp
+            TimeCalculator.h
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -31,9 +34,7 @@ set_target_properties(appMilitaryServiceCounter PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appMilitaryServiceCounter
-    PRIVATE Qt6::Quick
-)
+target_link_libraries(appMilitaryServiceCounter PRIVATE Qt6::Quick)
 
 include(GNUInstallDirs)
 install(TARGETS appMilitaryServiceCounter

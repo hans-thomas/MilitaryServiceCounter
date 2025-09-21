@@ -36,7 +36,8 @@ Window {
 
             Counter {
                 Layout.alignment: Qt.AlignHCenter
-                Layout.preferredWidth: mainWindow.height * 0.52
+                Layout.preferredWidth: mainWindow.height * 0.5
+                Layout.maximumWidth: parent.width * 0.9
 
                 total_days: timeCalc.totalDays()
                 passed_days: timeCalc.daysPassed()

@@ -18,10 +18,9 @@ qt_add_qml_module(appMilitaryServiceCounter
     QML_FILES
         Main.qml
         Counter.ui.qml
-    SOURCES
-            TimeCalculator.cpp
-            TimeCalculator.h
 )
+
+add_subdirectory(MyApp/TimeCalculator)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -34,7 +33,7 @@ set_target_properties(appMilitaryServiceCounter PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appMilitaryServiceCounter PRIVATE Qt6::Quick)
+target_link_libraries(appMilitaryServiceCounter PRIVATE Qt6::Quick TimeCalculatorLib)
 
 include(GNUInstallDirs)
 install(TARGETS appMilitaryServiceCounter

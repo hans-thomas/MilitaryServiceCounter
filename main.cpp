@@ -1,6 +1,5 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "TimeCalculator.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,7 +13,7 @@ int main(int argc, char *argv[])
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
 
-    qmlRegisterType<TimeCalculator>("MyApp.TimeCalculator", 1, 0, "TimeCalculator");
+    //qmlRegisterType<TimeCalculator>("MyApp.TimeCalculator", 1, 0, "TimeCalculator");
 
     engine.loadFromModule("MyApp", "Main");
 

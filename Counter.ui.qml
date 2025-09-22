@@ -30,7 +30,7 @@ Item {
         Text {
             id: text1
             text: total_days - passed_days
-            font.pixelSize: root.width * 0.15
+            font.pixelSize: root.width >= 200 ? root.width * 0.15 : root.width * 0.11
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 35
@@ -47,7 +47,7 @@ Item {
         Text {
             id: text3
             text: total_days
-            font.pixelSize: root.width * 0.17
+            font.pixelSize: root.width >= 200 ? root.width * 0.17 : root.width * 0.13
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: 30
